@@ -92,6 +92,7 @@ export default class Epage {
       }
 
       this.$$origin = this.render()
+      this.callPlugin('life', 'created', { ctx: this })
     } else {
       console.error('widgets must be an array')
     }
@@ -148,7 +149,6 @@ export default class Epage {
     this.callPlugin('life', 'beforeCreate', { ctx: this })
     /* eslint-disable no-new */
     const ins = new Vue({ extension, el, render: h => h(Editor) })
-    this.callPlugin('life', 'created', { ctx: this, ins })
     return ins
   }
 

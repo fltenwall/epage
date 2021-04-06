@@ -1,5 +1,13 @@
 # Change Log
 
+
+### 0.7.3（2021/3/2）
+
+- [fix] : 修复设计器生命周期`created`位置不正确问题
+- [fix] : 更新依赖`epage-core`，增强根据`shema`添加组件`store.addWidget()`
+- [fix] : 修复`store.updateWidgetOption(rootSchema.key, {})`不能更新`rootSchema.option`问题
+
+
 ### 0.7.2（2021/3/1）
 
 - [feat] : 设计器支持`tool`、`setting`面板自定义

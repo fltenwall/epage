@@ -38,6 +38,7 @@ export default {
     const option = { ...config, el }
     // 设计器
     this.epage = new Epage(option)
+    window.ee = this.epage
     this.epage.$render.store.updateModel(this.model)
     // render
     // this.epage = new render.VueRender(option)

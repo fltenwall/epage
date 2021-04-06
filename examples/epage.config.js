@@ -17,29 +17,30 @@ class EpagePlugin{
   constructor(option) {
   }
   apply (hooks, epage) {
-    hooks.life.beforeCreate.tap(function ()  {
-      console.log(11, this)
-    })
+    // hooks.life.beforeCreate.tap(function ()  {
+    //   console.log(11, this)
+    // })
     
-    hooks.life.beforeCreate.tap(function ()  {
-      console.log(13, this)
-    })
-    hooks.life.created.tap(({ ctx }) => {
-      console.log(ctx, this.option, 99)
-    })
-    hooks.life.beforeDestroy.tap(() => {
-      console.log(ctx, this.option, 12)
-    })
-    hooks.life.destroyed.tap((ctx) => {
-      console.log(ctx, 49)
-    })
+    // hooks.life.beforeCreate.tap(function ()  {
+    //   console.log(13, this)
+    // })
+    // hooks.life.created.tap(({ ctx }) => {
+    //   console.log(ctx, this.option, 99)
+    // })
+    // hooks.life.beforeDestroy.tap(() => {
+    //   console.log(ctx, this.option, 12)
+    // })
+    // hooks.life.destroyed.tap((ctx) => {
+    //   console.log(ctx, 49)
+    // })
 
     hooks.schema.copy.tap((str) => {
+      console.log(333, str)
       return str + '\n\n ====== the end ====='
     })
-    hooks.life.beforeCreate.tap(function ()  {
-      console.log(12, this)
-    })
+    // hooks.life.beforeCreate.tap(function ()  {
+    //   console.log(12, this)
+    // })
   }
 }
 
@@ -64,7 +65,7 @@ export default {
   schema,
   plugins: [
     new EpageInitPlugin(),
-    // new EpagePlugin()
+    new EpagePlugin()
   ],
   panels: {
     footer: {
