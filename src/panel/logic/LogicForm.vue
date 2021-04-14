@@ -8,7 +8,6 @@
           :key='schema.key'
           :value="schema.key"
         ) {{getSchemaText(schema.key)}}
-
     FormItem(:label='map.type[curLogic.type] || "关系"')
       Select(v-model="curLogic.action")
         Option(
@@ -169,8 +168,12 @@ export default {
     },
     getSchemaText (key) {
       const schema = this.flatSchemas[key] || {}
-      const label = schema.label || ''
+      let label = schema.label || ''
       const option = schema.option || {}
+
+      if (typeof label === 'object') {
+        label = label.text || ''
+      }
 
       return label.trim() || option.text || key
     },
