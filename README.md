@@ -94,11 +94,6 @@ new Epage(config)
 
 [epage](http://epage.didichuxing.com/)的设计器及渲染器分别基于原生dom节点设计，使得设计器及渲染器分离，结合统一的[schema](http://epage.didichuxing.com/developer/schema.html)规范，实现一次设计多处渲染。关于如何定制开发widget可以访问 [如何开发widget?](http://epage.didichuxing.com/developer/widget.html)
 
-## 交流群
-
-QQ群( 1128074461 )
-
-<img src="https://img-hxy021.didistatic.com/static/star/epage-qrcode-qq.png" width="250">
 
 ## License
 
